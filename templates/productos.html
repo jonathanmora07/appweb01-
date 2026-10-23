@@ -1,11 +1,11 @@
- {%block content%}
+{% extends 'layout.html' %}
 
-   {% block content %}
+{% block content %}
   <div class="container-fluid">
-  <a class="navbar-brand" href="#">Navbar</a>
-  
+    <a class="navbar-brand" href="#">Navbar</a>
+
     <h1>Productos</h1>
-    <p>{{ mensaje }}</p> 
+    <p>{{ mensaje }}</p>
     <p>Estos son los productos que ofrecemos.</p>
-    </div> 
-     {% endblock %} 
+  </div>
+{% endblock %}
