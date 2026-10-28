@@ -1,0 +1,123 @@
+/* ==========================================
+   HOJA DE ESTILOS PERSONALIZADA - UDL-ICO
+   Estilo: Profesional y Minimalista
+   ========================================== */
+
+/* 1. Variables Globales y Paleta de Colores */
+:root {
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --bg-main: #f8f9fa;
+  --bg-card: #ffffff;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --accent-color: #2563eb;
+  --accent-hover: #1d4ed8;
+  --border-color: #e2e8f0;
+  --shadow-subtle: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --radius-custom: 8px;
+}
+
+/* 2. Estilos Generales del Cuerpo */
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 3. Contenedores */
+.container-fluid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* 4. Barra de Navegación (.navbar, .navbar-brand, .nav-link) */
+.navbar {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-custom);
+  box-shadow: var(--shadow-subtle);
+  padding: 0.8rem 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--text-primary) !important;
+  letter-spacing: -0.02em;
+  transition: color 0.2s ease;
+}
+
+.navbar-brand:hover {
+  color: var(--accent-color) !important;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: var(--text-secondary) !important;
+  padding: 0.5rem 1rem !important;
+  margin: 0 0.2rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--accent-color) !important;
+  background-color: rgba(37, 99, 235, 0.05);
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--accent-color) !important;
+  font-weight: 600;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.4rem 0.6rem;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-color);
+}
+
+/* 5. Estilizado del Contenido Principal (Títulos y Párrafos) */
+/* Los bloques de contenido dentro del container-fluid adoptan un estilo de tarjeta limpia */
+.container-fluid > h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-bottom: 1.2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+/* Línea minimalista acentuada debajo del título principal */
+.container-fluid > h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+.container-fluid > p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
+  max-width: 650px;
+}
+
+/* Destacar el primer mensaje/dinámico */
+.container-fluid > p:first-of-type {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  font-weight: 500;
+} 
